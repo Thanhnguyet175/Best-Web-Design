@@ -1,0 +1,420 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* Header */
+.header {
+    position: relative;
+    background: url('index.bg.jpg') no-repeat center center/cover;
+    height: 250px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.header p {
+    margin-top: 8px;
+    font-size: 1.3rem;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.main-nav {
+    background-color: #004d40;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: #e0f2f1;
+    font-weight: 600;
+    padding: 15px 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
+    background-color: #00796b;
+    border-radius: 6px;
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: 30px auto 50px;
+    padding: 0 15px;
+}
+
+/* Region sections */
+.region-section {
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.region-section h2 {
+    color: #004d40;
+    font-size: 2rem;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #00796b;
+    padding-bottom: 6px;
+}
+
+/* Sub-navigation trong từng miền */
+.sub-nav ul {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.sub-nav ul li a {
+    color: #00796b;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sub-nav ul li a:hover,
+.sub-nav ul li a:focus {
+    background-color: #004d40;
+    color: #e0f2f1;
+}
+
+/* Cards nhóm danh thắng */
+.cards-group h3 {
+    color: #004d40;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+    flex: 1 1 calc(33% - 20px);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card:hover,
+.card:focus {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 12px rgb(0 0 0 / 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid #b2dfdb;
+}
+
+.card h4 {
+    margin: 12px 15px 6px;
+    color: #00796b;
+}
+
+.card p {
+    margin: 0 15px 15px;
+    font-size: 0.9rem;
+    color: #004d40;
+    flex-grow: 1;
+}
+
+/* Gallery ảnh tổng hợp */
+.gallery-section h2 {
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover,
+.gallery-grid img:focus {
+    transform: scale(1.05);
+}
+
+/* Giới thiệu */
+.intro-section {
+    background-color: #dcedc8;
+    border-radius: 8px;
+    padding: 20px 30px;
+    color: #33691e;
+    margin-bottom: 50px;
+}
+
+.intro-section h2 {
+    margin-bottom: 15px;
+}
+
+/* Liên hệ */
+.contact-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px 30px;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 0.1);
+    margin-bottom: 50px;
+}
+
+.contact-section h2 {
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #004d40;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #b2dfdb;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #00796b;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    background-color: #004d40;
+}
+
+.footer-section {
+    background-color: #004d40;
+    /* xanh đậm như nav */
+    color: #d0f0e0;
+    /* màu chữ sáng, nhẹ nhàng */
+    padding: 40px 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.footer-section .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.footer-col {
+    flex: 1 1 22%;
+    min-width: 220px;
+}
+
+.footer-col h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #c5e86c;
+    /* xanh nhạt */
+}
+
+.footer-col h3 .logo-icon {
+    color: #c5e86c;
+    margin-right: 8px;
+    font-size: 26px;
+    vertical-align: middle;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #b2dfdb;
+    /* xanh nhẹ */
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #e0f2f1;
+    /* sáng hơn khi hover */
+}
+
+.footer-col p {
+    color: #cde8e1;
+}
+
+.social-icons a {
+    font-size: 18px;
+    color: #b2dfdb;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e0f2f1;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.subscribe-form button {
+    background-color: #80cbc4;
+    border: none;
+    color: #004d40;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #4db6ac;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #337a73;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #a7ccc6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .footer-col {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-row {
+        flex-direction: column;
+    }
+
+    .footer-col {
+        flex: 1 1 100%;
+        margin-bottom: 25px;
+    }
+}
